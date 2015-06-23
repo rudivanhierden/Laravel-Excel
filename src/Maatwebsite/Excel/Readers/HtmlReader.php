@@ -261,7 +261,7 @@ class Html extends PHPExcel_Reader_HTML {
             if ( $child instanceof DOMText )
             {
                 // get the dom text
-                $domText = preg_replace('/\s+/u', ' ', trim($child->nodeValue));
+                $domText = trim($child->nodeValue);
 
                 //  simply append the text if the cell content is a plain text string
                 if ( is_string($cellContent) )
